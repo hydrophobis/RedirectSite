@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In-Tab Redirect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        input {
+            padding: 10px;
+            width: 300px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>In-Tab Redirect</h1>
+    <input type="text" id="urlInput" placeholder="Enter URL here" />
+    <button id="redirectButton">Redirect</button>
+
+    <script>
+        document.getElementById('redirectButton').addEventListener('click', function() {
+            const url = document.getElementById('urlInput').value;
+            if (url) {
+                // Redirect to the specified URL
+                window.location.href = url;
+            } else {
+                alert('Please enter a valid URL.');
+            }
+        });
+    </script>
+
+</body>
+</html>
